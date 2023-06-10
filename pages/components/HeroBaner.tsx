@@ -1,36 +1,24 @@
 import React from 'react';
 import Slider from "react-slick";
+import data from '../json/hero.json'
+import Image from 'next/image';
 
 const HeroBaner = () => {
     const settings = {
-        dots: true,
+        dots: false,
         infinite: true,
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1
     };
     return (
-        <div>
-            <h2> Single Item</h2>
-            <Slider {...settings} className='container'>
-                <div>
-                    <h3>1</h3>
-                </div>
-                <div>
-                    <h3>2</h3>
-                </div>
-                <div>
-                    <h3>3</h3>
-                </div>
-                <div>
-                    <h3>4</h3>
-                </div>
-                <div>
-                    <h3>5</h3>
-                </div>
-                <div>
-                    <h3>6</h3>
-                </div>
+        <div className='hero-banner-container relative bg-black'>
+            <Slider {...settings} className=''>
+                {data.map((index)=>(
+                    <div className="bannerBox" key={index.id}>
+                        <Image src={index.banerImg} width={440} height={450} alt='banner-pic'/>
+                    </div>
+                ))}
             </Slider>
         </div>
     );

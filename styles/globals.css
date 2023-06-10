@@ -3,42 +3,71 @@
 @tailwind utilities;
 
 .tabs a .tab:after {
-    content: "";
-    position: absolute;
-    background-color: #ca445a;
-    height: 3px;
-    width: 0px;
-    left: 0px;
-    bottom: -4px;
-    border-radius: 30px;
-    transition: all 1s ease-in-out;
+  content: "";
+  position: absolute;
+  background-color: #ca445a;
+  height: 3px;
+  width: 0px;
+  left: 0px;
+  bottom: -4px;
+  border-radius: 30px;
+  transition: all 1s ease-in-out;
 }
 .tabs a .tab:hover:after {
-    width: 100%;
+  width: 100%;
 }
 
-.about-Tab .left-Icon, .about-Tab .right-Icon{
-    position: relative;
-    display: inline-block;
-    width: 10px;
-    height: 3px;
-    top: -2px;
-    border-radius: 40px;
-    background-color: #000;
-    transition: all .5s ease-in-out;
+.about-Tab .left-Icon,
+.about-Tab .right-Icon {
+  position: relative;
+  display: inline-block;
+  width: 10px;
+  height: 3px;
+  top: -2px;
+  border-radius: 40px;
+  background-color: #000;
+  transition: all 0.5s ease-in-out;
 }
-.about-Tab .left-Icon{
-    left: 4px;
-    transform: rotate(45deg);
+.about-Tab .left-Icon {
+  left: 4px;
+  transform: rotate(45deg);
 }
-.about-Tab .right-Icon{
-    transform: rotate(-45deg);
+.about-Tab .right-Icon {
+  transform: rotate(-45deg);
 }
 /* on active mode */
-.about-Tab.active .left-Icon{
-    left: 4px;
-    transform: rotate(-45deg);
+.about-Tab.active .left-Icon {
+  left: 4px;
+  transform: rotate(-45deg);
 }
-.about-Tab.active .right-Icon{
-    transform: rotate(45deg);
+.about-Tab.active .right-Icon {
+  transform: rotate(45deg);
+}
+
+.hero-banner-container {
+  width: 100%;
+}
+
+.slick-prev,
+.slick-next {
+  background-color: #000 !important;
+}
+.slick-slider .slick-prev {
+  position: absolute;
+  left: 45px;
+  z-index: 999;
+}
+.slick-slider .slick-next {
+  position: absolute;
+  right: 45px;
+  z-index: 999;
+}
+
+/* contact form */
+input,
+textarea {
+  @apply shadow-md px-3 py-2 border border-slate-300;
+}
+form > div {
+  @apply flex flex-col gap-2;
 }

@@ -1,3 +1,4 @@
+import HeroBaner from "./components/HeroBaner";
 import Layout from "./components/Layout";
 import Head from "next/head";
 
@@ -8,7 +9,7 @@ export default function Home() {
         <title>DevPak || Home</title>
       </Head>
       <Layout>
-        Home Page
+        <HeroBaner />
       </Layout>
     </div>
   )
