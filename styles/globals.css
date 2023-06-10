@@ -2,26 +2,43 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.tabs a .tab:after {
+    content: "";
+    position: absolute;
+    background-color: #ca445a;
+    height: 3px;
+    width: 0px;
+    left: 0px;
+    bottom: -4px;
+    border-radius: 30px;
+    transition: all 1s ease-in-out;
+}
+.tabs a .tab:hover:after {
+    width: 100%;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.about-Tab .left-Icon, .about-Tab .right-Icon{
+    position: relative;
+    display: inline-block;
+    width: 10px;
+    height: 3px;
+    top: -2px;
+    border-radius: 40px;
+    background-color: #000;
+    transition: all .5s ease-in-out;
 }
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.about-Tab .left-Icon{
+    left: 4px;
+    transform: rotate(45deg);
+}
+.about-Tab .right-Icon{
+    transform: rotate(-45deg);
+}
+/* on active mode */
+.about-Tab.active .left-Icon{
+    left: 4px;
+    transform: rotate(-45deg);
+}
+.about-Tab.active .right-Icon{
+    transform: rotate(45deg);
 }
