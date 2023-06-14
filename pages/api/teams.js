@@ -6,7 +6,7 @@ export default async function handleteam(req, res) {
   await mongoosedbTeamConnection();
 
   if(method === "GET"){
-    res.json(await Teams.find())
+    res.json(await Teams.find().limit(6))
   }
 
   if (method === "POST") {
