@@ -18,6 +18,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "lib/mongodb.js", "pages/api/auth/[...nextauth].js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "lib/mongodb.js", "pages/api/auth/[...nextauth].js", "pages/api/contact/index.js", "pages/components/ContactForm.jsx", "pages/components/Card.jsx", "pages/components/TeamDashBoard.jsx"],
   "exclude": ["node_modules"]
 }

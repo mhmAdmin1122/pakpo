@@ -30,7 +30,7 @@ export default function SigIn_Out() {
     }
     return (
         <>
-            <button onClick={() => signIn()} className='bg-green-800 text-white px-4 py-2 rounded-md'>Sign in</button>
+            <button onClick={() => signIn('google')} className='bg-green-800 text-white px-4 py-2 rounded-md'>Sign in</button>
         </>
     )
 }

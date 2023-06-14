@@ -7,9 +7,12 @@ const HeroBaner = () => {
     const settings = {
         dots: false,
         infinite: true,
-        speed: 500,
         slidesToShow: 1,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        speed: 2000,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        pauseOnHover: true
     };
     return (
         <div className='hero-banner-container relative bg-black'>

@@ -64,10 +64,32 @@
 }
 
 /* contact form */
-input,
+/* input,
 textarea {
   @apply shadow-md px-3 py-2 border border-slate-300;
 }
 form > div {
   @apply flex flex-col gap-2;
+} */
+/* term and services */
+
+.ts-boxes-cont{
+  @apply shadow-md px-4 py-3 border border-slate-300 mt-3;
+}
+.ts-boxes-cont h2{
+  @apply font-bold text-xl mb-2;
+}
+
+/*  addTeam-Form */
+
+.addTeam-Form label{
+  @apply font-bold text-lg text-gray-800 my-2;
+}
+
+.addTeam-Form input{
+  @apply border-2 border-gray-200 shadow-md shadow-gray-300 w-full px-8 py-3 rounded-md outline-none;
+}
+
+.addTeam-Form textarea{
+  @apply border-2 border-gray-200 shadow-md shadow-gray-300 w-full px-8 py-3 rounded-md outline-none max-h-44;
 }
