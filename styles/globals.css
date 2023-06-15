@@ -82,14 +82,14 @@ form > div {
 
 /*  addTeam-Form */
 
-.addTeam-Form label{
+.addTeam-Form label, .service-add-from label{
   @apply font-bold text-lg text-gray-800 my-2;
 }
 
-.addTeam-Form input{
+.addTeam-Form input, .service-add-from input{
   @apply border-2 border-gray-200 shadow-md shadow-gray-300 w-full px-8 py-3 rounded-md outline-none;
 }
 
-.addTeam-Form textarea{
+.addTeam-Form textarea, .service-add-from textarea{
   @apply border-2 border-gray-200 shadow-md shadow-gray-300 w-full px-8 py-3 rounded-md outline-none max-h-44;
 }
