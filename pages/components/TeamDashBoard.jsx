@@ -12,16 +12,25 @@ const TeamDashBoard = () => {
 
     const handleFileChange = (event) => {
         const file = event.target.files[0];
-        setImage(URL.createObjectURL(file));
+        const reader = new FileReader();
+        reader.readAsDataURL(file)
+        reader.onload = () => {
+            setImage(reader.result);
+            console.log(reader.result);
+        }
+        reader.onerror = (error) => {
+            console.log('Error', error)
+        }
     };
 
     async function handleSubmit(event) {
         event.preventDefault();
-        const data = {memberName, memberPosition, age, image, bio}
+        const data = { memberName, memberPosition, age, image, bio }
         await axios.post('/api/teams', data)
     };
 
     return (
+
         <form onSubmit={handleSubmit} className='grid px-36 addTeam-Form items-center justify-center'>
 
             <h1 className='font-bold text-3xl py-8 text-center'>Add Member to <b className='text-green-700'>DevPak</b> Team</h1>
@@ -49,6 +58,7 @@ const TeamDashBoard = () => {
             </div>
 
         </form>
+
     )
 }
 

@@ -10,15 +10,15 @@ const Card = ({ data }:any) => {
     });
   }, []);
   return (
-    <div className='card px-32 grid items-center justify-center justify-items-center'
+    <div className='card px-32 grid items-center justify-center justify-items-center '
       data-aos="zoom-in"
       data-aos-easing="ease-out-cubic"
       data-aos-duration="2000">
-      <div className={'flex w-full items-start justify-center border-2 border-gray-200 shadow-md shadow-gray-300 rounded-lg overflow-hidden'}>
+      <div className={'h-56 flex w-full items-start justify-center border-2 border-gray-200 shadow-md shadow-gray-300 rounded-lg overflow-hidden'}>
         <div className="cardImage pr-4 h-full w-1/4">
-          <img src="/img/user-team.jpg" alt="member-pic" className='w-full h-full' />
+          <img src={data.image} alt="member-pic" className='w-full h-56' />
         </div>
-        <div className="card-body w-3/4 py-6 pr-12">
+        <div className="card-body w-3/4 py-6 pr-12 overflow-hidden">
           <b className='text-2xl py-6'>{data?.memberName}</b>
           <h1 className='mr-2 text-gray-600 text-lg font-bold py-2'>Position: {data?.memberPosition}</h1>
           <h1 className='text-gray-600 mr-2 text-lg font-bold py-2'>Age: {data?.age}</h1>

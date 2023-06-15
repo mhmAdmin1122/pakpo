@@ -18,7 +18,7 @@ const TermServices = () => {
         <title>DevPak || Terms & Conditions</title>
       </Head>
       <Layout>
-        <h1 className='text-center my-4 text-3xl font-bold'>Website Terms & Conditions of Use</h1>
+        <h1 className='text-center my-4 text-3xl font-bold'><b className='text-green-700'>DevPak</b> Terms & Conditions of Use</h1>
         <div className="mainBox-TServices px-32">
 
           <div className="ts-boxes-cont termBox">
