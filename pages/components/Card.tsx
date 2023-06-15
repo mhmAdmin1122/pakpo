@@ -16,7 +16,7 @@ const Card = ({ data }:any) => {
       data-aos-duration="2000">
       <div className={'h-56 flex w-full items-start justify-center border-2 border-gray-200 shadow-md shadow-gray-300 rounded-lg overflow-hidden'}>
         <div className="cardImage pr-4 h-full w-1/4">
-          <img src={data.image} alt="member-pic" className='w-full h-56' />
+          <img src={data?.image} alt="member-pic" className='w-full h-56' />
         </div>
         <div className="card-body w-3/4 py-6 pr-12 overflow-hidden">
           <b className='text-2xl py-6'>{data?.memberName}</b>
