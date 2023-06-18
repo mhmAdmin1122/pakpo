@@ -73,23 +73,39 @@ form > div {
 } */
 /* term and services */
 
-.ts-boxes-cont{
+.ts-boxes-cont {
   @apply shadow-md px-4 py-3 border border-slate-300 mt-3;
 }
-.ts-boxes-cont h2{
+.ts-boxes-cont h2 {
   @apply font-bold text-xl mb-2;
 }
 
 /*  addTeam-Form */
 
-.addTeam-Form label, .service-add-from label{
+.addTeam-Form label,
+.service-add-from label,
+.popCourse-Dash label {
   @apply font-bold text-lg text-gray-800 my-2;
 }
 
-.addTeam-Form input, .service-add-from input{
+.addTeam-Form input,
+.service-add-from input,
+.popCourse-Dash input {
   @apply border-2 border-gray-200 shadow-md shadow-gray-300 w-full px-8 py-3 rounded-md outline-none;
 }
 
-.addTeam-Form textarea, .service-add-from textarea{
+.addTeam-Form textarea,
+.service-add-from textarea,
+.popCourse-Dash textarea {
   @apply border-2 border-gray-200 shadow-md shadow-gray-300 w-full px-8 py-3 rounded-md outline-none max-h-44;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.Image-bOX img{
+  height: 200px;
 }

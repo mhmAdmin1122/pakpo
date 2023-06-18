@@ -6,8 +6,9 @@ import axios from 'axios'
 import ServiceCard from '../components/ServiceCard'
 
 const Services = () => {
-  const [service, setService] = useState<string | Boolean | Number | null | never | object | any>([]);
-  const id: string = service._id;
+  const [service, setService] = useState([]);
+  // const id: string = service._id;
+  // console.log(id)
   useEffect(() => {
     axios.get('/api/service').then(res => {
       setService(res.data)
@@ -24,8 +25,8 @@ const Services = () => {
           Services
         </h1>
         <div className="cardServivr-box flex flex-wrap justify-center items-start">
-          {service.map((service: string) => (
-            <ServiceCard data={service} key={id} />
+          {service.map((service: any) => (
+            <ServiceCard data={service} key={service._id} />
           ))}
         </div>
       </Layout>

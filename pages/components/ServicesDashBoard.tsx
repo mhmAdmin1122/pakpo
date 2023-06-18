@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import Layout from './Layout'
 import Head from 'next/head'
 import axios from 'axios';
@@ -8,8 +8,8 @@ const ServicesDashBoard = () => {
     const [title, setTitle] = useState('');
     const [about, setAbout] = useState('');
     const [image, setImage] = useState<any>('');
-    
-    const handleFileChange = (event:any) => {
+
+    const handleFileChange = (event: any) => {
         const file = event.target.files[0];
         const reader = new FileReader();
         reader.readAsDataURL(file)
@@ -22,7 +22,7 @@ const ServicesDashBoard = () => {
         }
     };
 
-    async function handleSubmit(event:any) {
+    async function handleSubmit(event: any) {
         event.preventDefault();
         const data = { title, about, image }
         await axios.post('/api/service', data)
