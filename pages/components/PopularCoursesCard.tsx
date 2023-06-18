@@ -8,7 +8,7 @@ const PopularCoursesCard = ({ data }: any) => {
                 <div className="Image-bOX cursor-pointer relative">
                     <Image src={data?.image} alt='cousre-card' width={255} height={200}/>
                     <div className="badge absolute z-20 top-1.5 right-2 bg-green-700 text-white px-4 py-2 rounded-md">
-                        <b>{data.category}</b>
+                        <b>{data?.category}</b>
                         <b className='absolute z-30 top-1 right-1'>*</b>
                     </div>
                 </div>
